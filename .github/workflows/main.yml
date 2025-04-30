@@ -1,0 +1,12 @@
+name: Test secrets e variables
+on:
+  push:
+  workflow_dispatch:
+
+jobs:
+  test:
+     runs-on: ubuntu-latest
+     environment: env
+     steps:
+      - name: Print secret
+        run: echo "A senha é ${{ secrets.SECRET }}"
