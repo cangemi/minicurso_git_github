@@ -12,4 +12,4 @@ jobs:
         run: echo "A senha é ${{ secrets.SECRET }}"
         
       - name: Print variables
-        run: echo "A senha é ${{ var.VARIABLE }}"
+        run: echo "A senha é ${{ vars.VARIABLE }}"
