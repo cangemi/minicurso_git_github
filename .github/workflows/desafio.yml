@@ -23,4 +23,4 @@ jobs:
         run: |
           git add README.md
           git commit -m "Atualiza README.md via Actions"
-          git push origin main
+          git push https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }} HEAD:main
