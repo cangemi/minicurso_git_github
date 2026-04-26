@@ -1,43 +1,113 @@
-@import url("https://fonts.googleapis.com/css?family=Lato");
-
-body{
-    padding: 0;
-    margin: 0;
+* {
+    box-sizing: border-box;
 }
 
-.container{
-    width: 100w;
-    height: 100vh;
-    background: #1a1a1a;
+body {
+    margin: 0;
+    min-height: 100vh;
+    background:
+        radial-gradient(circle at top, #2f365c 0%, #151825 45%, #090b12 100%);
+    font-family: "Courier New", monospace;
+    display: flex;
+    flex-direction: column;
+}
+
+.hero {
+    flex: 1;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
+    padding-top: 24px;
 }
 
-.form-box{
-    width: 300px;
-    background: #f1f1f1;
-    font-family: Lato;
+.page-title {
+    margin: 0;
+    padding: 0 20px;
     text-align: center;
-    padding: 25px;
-    box-sizing: border-box;
-    border-top: 10px solid #508c88;
+    color: #f7f0d0;
+    font-size: clamp(2rem, 4vw, 3.6rem);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    text-shadow: 0 6px 20px rgba(0, 0, 0, 0.35);
 }
 
-.form-box .form-btn{
-    border: none;
-    background: #508c88;
-    width: 100%;
-    height: 50px;
-    font-size: large;
-    color: #fff;
-    margin-bottom: 10px;
+.scene {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4vw;
+    padding: 32px;
+    flex-wrap: wrap;
 }
 
-@media screen and(max-width: 340px){
-    .form-box{
-        width: 100vw;
-        height: 100vh;
+.ascii {
+    margin: 0;
+    white-space: pre;
+    font-weight: 700;
+    line-height: 0.88;
+    letter-spacing: -0.08em;
+    font-size: clamp(1rem, 1.9vw, 2rem);
+    transform-style: preserve-3d;
+    animation: spin-number 8s linear infinite;
+    text-shadow:
+        1px 1px 0 rgba(0, 0, 0, 0.55),
+        2px 2px 0 rgba(0, 0, 0, 0.5),
+        3px 3px 0 rgba(0, 0, 0, 0.45),
+        4px 4px 0 rgba(0, 0, 0, 0.4),
+        5px 5px 0 rgba(0, 0, 0, 0.35),
+        6px 6px 0 rgba(0, 0, 0, 0.3),
+        7px 7px 14px rgba(0, 0, 0, 0.45);
+}
+
+.ascii-six {
+    color: #ffb347;
+}
+
+.ascii-seven {
+    color: #7fd6ff;
+    animation-duration: 6.5s;
+}
+
+@keyframes spin-number {
+    0% {
+        transform: perspective(900px) rotateX(10deg) rotateY(0deg) skewY(-6deg);
+    }
+
+    100% {
+        transform: perspective(900px) rotateX(10deg) rotateY(360deg) skewY(-6deg);
+    }
+}
+
+.actions {
+    display: flex;
+    justify-content: center;
+    padding: 0 20px 32px;
+}
+
+.next-button {
+    display: inline-block;
+    padding: 14px 28px;
+    border-radius: 999px;
+    background: linear-gradient(135deg, #ffe17a, #ff9f43);
+    color: #111;
+    text-decoration: none;
+    font-weight: 700;
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.28);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.next-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 18px 34px rgba(0, 0, 0, 0.34);
+}
+
+@media (max-width: 700px) {
+    .scene {
+        gap: 24px;
+        padding: 20px;
+    }
+
+    .ascii {
+        font-size: clamp(0.72rem, 2.6vw, 1.1rem);
     }
 }
