@@ -521,3 +521,4 @@ git branch -M main
 - Abrir Pull Request com título claro.
 - Revisar o código antes de aprovar merge.
 - Fazer `pull` ou `fetch` com frequência para evitar conflitos grandes.
+
