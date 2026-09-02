@@ -520,4 +520,4 @@ git branch -M main
 - Fazer commits pequenos e bem descritos.
 - Abrir Pull Request com título claro.
 - Revisar o código antes de aprovar merge.
-- Fazer `pull` ou `fetch` com frequência para evitar conflitos grandes
+- Fazer `pull` ou `fetch` com frequência para evitar conflitos gr
